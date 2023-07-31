@@ -1,0 +1,25 @@
+/* @font-face {
+    font-family: "Recoleta";
+    src: url(../public/Fonts/3A95AC_2_0.ttf) format(ttf);
+}
+
+@font-face {
+    font-family: "Graphik Web";
+    src: url("/fonts/graphik/Graphik-Medium-Web.woff2") format("woff2"),
+      url("/fonts/graphik/Graphik-Medium-Web.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :where(h1, h2, h3):not(.not-fancy) {
+    font-family: Recoleta, ui-serif, Georgia, Cambria, "Times New Roman", Times,
+      serif;
+  }
+} */
