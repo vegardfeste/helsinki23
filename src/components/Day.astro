@@ -1,0 +1,17 @@
+---
+const { day, index } = Astro.props;
+---
+
+<section>
+    <div class={`container mt-10 p-4 mx-auto ${index % 2 === 0 && 'bg-light-purple rounded-lg'}`}>
+        <h2 class="text-4xl font-bold mb-4 p-5 sm:pt-20 sm:pl-20 font-recoleta">
+            {day.title}
+        </h2>
+        <div class="max-w-md mx-auto">
+            <div class="text-xl mb-20 align-middle">
+                {day.Content && <day.Content />}
+            </div>
+        </div>
+    </div>
+</section>
+  
