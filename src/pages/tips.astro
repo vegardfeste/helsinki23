@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Inspo from '../components/Inspo.astro';
+import Activity from '../components/Activity.astro';
+const activities = await Astro.glob('../content/activities/*.mdx');
+---
+
+<Layout title="Lørdagstips">
+	<main>
+        <Inspo />
+		<ul>
+			{activities.map(activity => <li><Activity activity={activity} /></li>)}
+		</ul>
+	</main>
+</Layout>

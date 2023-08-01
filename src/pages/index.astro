@@ -2,17 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Description from '../components/Description.astro';
-import Fredag from '../components/Fredag.astro';
-import Saturday from '../components/Saturday.astro';
-import Sunday from '../components/Sunday.astro';
+import Day from '../components/Day.astro';
+const days = await Astro.glob('../content/days/*.mdx');
 ---
 
 <Layout title="Helsinki">
 	<main>
-		<Hero/>
-		<Description/>
-		<Fredag />
-		<Saturday />
-		<Sunday />
+		<Hero />
+		<Description />
+		<ul>
+			{days.map((day, index) => <li><Day day={day} index={index} /></li>)}
+		</ul>
 	</main>
 </Layout>
