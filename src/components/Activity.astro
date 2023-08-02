@@ -1,15 +1,22 @@
 ---
-const { activity } = Astro.props;
+import ExternalLink from './ExternalLink.astro';
+const { title, activity } = Astro.props;
 ---
 
+<style>
+    li {
+        list-style-type: disc;
+    }
+</style>
+
 <section>
-    <div class='container mt-10 p-4 mx-auto rounded-lg bg-dark-purple'>
+    <div class='container mt-10 p-4 mx-auto rounded-3xl bg-dark-purple'>
         <h2 class="text-4xl font-bold mb-4 p-5 sm:pt-20 sm:pl-20 font-recoleta">
-            {activity.title}
+            {title}
         </h2>
         <div class="max-w-md mx-auto">
-            <div class="text-xl mb-20 align-middle">
-                {activity.Content && <activity.Content />}
+            <ul class="text-xl mb-20 align-middle">
+                {activity.map(location => <li><ExternalLink link={location.link} title={location.title} /></li>)}
             </div>
         </div>
     </div>

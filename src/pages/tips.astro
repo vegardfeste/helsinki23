@@ -2,14 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import Inspo from '../components/Inspo.astro';
 import Activity from '../components/Activity.astro';
-const activities = await Astro.glob('../content/activities/*.mdx');
+import shopping from '../content/activities/shopping.json';
+import culture from '../content/activities/culture.json';
+import chill from '../content/activities/chill.json';
 ---
 
 <Layout title="Lørdagstips">
 	<main>
         <Inspo />
-		<ul>
-			{activities.map(activity => <li><Activity activity={activity} /></li>)}
-		</ul>
+		<Activity title="Shopping" activity={shopping} />
+		<Activity title="Kultur" activity={culture} />
+		<Activity title="Pusterom" activity={chill} />
 	</main>
 </Layout>
