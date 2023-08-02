@@ -10,6 +10,7 @@ module.exports = {
 			colors: {
 				'light-purple': '#534DAC',
 				'dark-purple': '#35316E',
+				'robins-egg-blue': '#03DAC6'
 			},
 
 		},
