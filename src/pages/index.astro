@@ -1,17 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import Navigation from '../components/Navigation.astro';
 import Description from '../components/Description.astro';
 import Day from '../components/Day.astro';
+import Practical from '../components/Practical.astro';
 const days = await Astro.glob('../content/days/*.mdx');
 ---
 
 <Layout title="Helsinki">
 	<main>
 		<Hero />
+		<Navigation goUp={false} />
 		<Description />
-		<div>
+		<div id="Days" class="mb-72">
 			{days.map((day, index) => <div><Day day={day} index={index} /></div>)}
 		</div>
+		<Practical />
+		<Navigation goUp={true} />
 	</main>
 </Layout>

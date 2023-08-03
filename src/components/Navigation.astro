@@ -1,0 +1,22 @@
+---
+import ArrowUp from './ArrowUp.astro';
+import ArrowDown from './ArrowDown.astro';
+
+const { goUp } = Astro.props;
+const props = goUp ? {
+  id: '#hero',
+  text: 'Ta meg til toppen',
+  icon: ArrowUp,
+} : {
+    id: '#Days',
+    text: 'Ta meg til programmet',
+    icon: ArrowDown,
+};
+---
+
+<div class={`mx-24 mt-10 ${goUp && 'bg-light-purple h-52 flex justify-center items-center'}`}>
+    <a href={props.id} class="flex justify-center">
+        <span class="mr-2">{props.text}</span>
+        <props.icon />
+    </a>
+</div>
