@@ -1,10 +1,15 @@
-[
-    {
-        "title": "Stockman",
-        "link": "https://www.google.com/maps/place/Stockmanns+varehus/@60.1683033,24.9396174,17z/data=!3m2!4b1!5s0x46920bcc6d43e133:0x8cbed2885d6dea6d!4m6!3m5!1s0x46920a34b10adafd:0x5ac022521cc28937!8m2!3d60.1683033!4d24.9421923!16s%2Fm%2F027qwxh?entry=ttu"
-    },
-    {
-        "title": "Forum",
-        "link": "https://www.google.com/maps/place/Forum/@60.1687904,24.9356189,17z/data=!3m1!4b1!4m6!3m5!1s0x46920bcc936d1fdd:0xd1d3d77114c834aa!8m2!3d60.1687904!4d24.9381938!16zL20vMGdfcWRt?entry=ttu"
-    }
-]
+{
+    "title": "Shopping",
+    "index": "0",
+    "suggestions": [
+        {
+            "title": "Stockman",
+            "link": "https://www.google.com/maps/place/Stockmanns+varehus/@60.1683033,24.9396174,17z/data=!3m2!4b1!5s0x46920bcc6d43e133:0x8cbed2885d6dea6d!4m6!3m5!1s0x46920a34b10adafd:0x5ac022521cc28937!8m2!3d60.1683033!4d24.9421923!16s%2Fm%2F027qwxh?entry=ttu"
+        },
+        {
+            "title": "Forum",
+            "link": "https://www.google.com/maps/place/Forum/@60.1687904,24.9356189,17z/data=!3m1!4b1!4m6!3m5!1s0x46920bcc936d1fdd:0xd1d3d77114c834aa!8m2!3d60.1687904!4d24.9381938!16zL20vMGdfcWRt?entry=ttu"
+        }
+    ],
+    "image": "/shopping.png"
+}

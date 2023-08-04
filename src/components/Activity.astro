@@ -1,23 +1,36 @@
 ---
-import ExternalLink from './ExternalLink.astro';
-const { title, activity } = Astro.props;
+import ExternalLink from "./ExternalLink.astro";
+const { activity } = Astro.props;
 ---
 
 <style>
-    li {
-        list-style-type: disc;
-    }
+  li {
+    list-style-type: disc;
+  }
 </style>
 
 <section>
-    <div class='container mt-10 p-4 mx-auto rounded-3xl bg-dark-purple'>
-        <h2 class="text-4xl font-bold mb-4 p-5 sm:pt-20 sm:pl-20">
-            {title}
-        </h2>
-        <div class="max-w-md mx-auto">
-            <ul class="text-xl mb-20 align-middle">
-                {activity.map(location => <li><ExternalLink link={location.link} title={location.title} /></li>)}
-            </div>
-        </div>
+  <div
+    class={`container mt-10 p-4 rounded-3xl bg-dark-purple flex flex-col ${
+      activity.index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+    } justify-between lg:mx-auto`}
+  >
+    <div>
+      <h2 class="text-4xl font-bold mb-4 p-5 lg:pt-20 lg:pl-20">
+        {activity.title}
+      </h2>
+      <div class="pl-8 lg:pl-20">
+        <ul class="text-xl mb-20 align-middle">
+          {
+            activity.suggestions.map((suggestion) => (
+              <li>
+                <ExternalLink link={suggestion.link} title={suggestion.title} />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
+    <img src={activity.image} alt={activity.title} class="w-full lg:w-1/2" />
+  </div>
 </section>

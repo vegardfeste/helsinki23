@@ -1,6 +1,11 @@
-[
-  {
-    "title": "Löyly badstue",
-    "link": "https://www.google.com/maps/place/L%C3%B6yly/@60.1520656,24.9276988,17z/data=!3m1!4b1!4m6!3m5!1s0x46920bb1e7ac65ed:0xfa81abed565b9424!8m2!3d60.1520656!4d24.9302737!16s%2Fg%2F11bzxyk_vm?entry=ttu"
-  }
-]
+{
+  "title": "Pusterom",
+  "index": "2",
+  "suggestions": [
+    {
+      "title": "Löyly badstue",
+      "link": "https://www.google.com/maps/place/L%C3%B6yly/@60.1520656,24.9276988,17z/data=!3m1!4b1!4m6!3m5!1s0x46920bb1e7ac65ed:0xfa81abed565b9424!8m2!3d60.1520656!4d24.9302737!16s%2Fg%2F11bzxyk_vm?entry=ttu"
+    }
+  ],
+  "image": "/chill.png"
+}
