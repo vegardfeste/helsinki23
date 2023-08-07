@@ -13,7 +13,7 @@ const days = await Astro.glob('../content/days/*.mdx');
 		<Hero />
 		<Navigation goUp={false} />
 		<Description />
-		<div id="Days" class="mb-72">
+		<div id="Days" class="mb-36 lg:mb-72">
 			{days.map((day, index) => <div><Day day={day} index={index} /></div>)}
 		</div>
 		<Practical />

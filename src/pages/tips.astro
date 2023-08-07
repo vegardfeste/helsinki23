@@ -1,17 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Inspo from '../components/Inspo.astro';
-import Activity from '../components/Activity.astro';
-import shopping from '../content/activities/shopping.json';
-import culture from '../content/activities/culture.json';
-import chill from '../content/activities/chill.json';
+import Layout from "../layouts/Layout.astro";
+import Inspo from "../components/Inspo.astro";
+import Activity from "../components/Activity.astro";
+const activities = await Astro.glob("../content/activities/*.json");
 ---
 
 <Layout title="Lørdagstips">
-	<main>
-        <Inspo />
-		<Activity title="Shopping" activity={shopping} />
-		<Activity title="Kultur" activity={culture} />
-		<Activity title="Pusterom" activity={chill} />
-	</main>
+  <main>
+    <Inspo />
+    <div class="mx-9">
+      {
+        activities
+          .sort((a, b) => a.index - b.index)
+          .map((activity) => (
+            <div>
+              <Activity activity={activity} />
+            </div>
+          ))
+      }
+    </div>
+  </main>
 </Layout>
