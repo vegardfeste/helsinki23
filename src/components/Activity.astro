@@ -11,26 +11,41 @@ const { activity } = Astro.props;
 
 <section>
   <div
-    class={`container mt-10 p-4 rounded-3xl bg-dark-purple flex flex-col ${
+    class={`container mx-auto mb-20 lg:mb-52 p-4 flex flex-col items-center ${
       activity.index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-    } justify-between lg:mx-auto`}
+    } static lg:relative`}
   >
-    <div>
-      <h2 class="text-4xl font-bold mb-4 p-5 lg:pt-20 lg:pl-20">
-        {activity.title}
-      </h2>
-      <div class="pl-8 lg:pl-20">
-        <ul class="text-xl mb-20 align-middle">
-          {
-            activity.suggestions.map((suggestion) => (
-              <li>
-                <ExternalLink link={suggestion.link} title={suggestion.title} />
-              </li>
-            ))
-          }
-        </ul>
+    <div
+      class={`flex ${
+        activity.index % 2 === 0 ? "lg:justify-start" : "lg:justify-end"
+      }  p-4 rounded-3xl bg-dark-purple w-full lg:w-4/5 mb-5`}
+    >
+      <div>
+        <h2 class="text-4xl font-bold mb-4 p-5 lg:pt-20 lg:pl-16">
+          {activity.title}
+        </h2>
+        <div class="pl-8 lg:pl-20">
+          <ul class="text-xl mb-20 align-middle">
+            {
+              activity.suggestions.map((suggestion) => (
+                <li>
+                  <ExternalLink
+                    link={suggestion.link}
+                    title={suggestion.title}
+                  />
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
-    <img src={activity.image} alt={activity.title} class="w-full lg:w-1/2" />
+    <img
+      src={activity.image}
+      alt={activity.title}
+      class={`lg:absolute ${
+        activity.index % 2 === 0 ? "lg:right-0" : "lg:left-0"
+      } lg:z-10`}
+    />
   </div>
 </section>
